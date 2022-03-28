@@ -2,7 +2,7 @@ import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import Home from "../Screens/Home";
 import Login from "../Screens/Login";
-import Activities from "../Screens/Activities";
+import Tab from "../Screens/Tab";
 
 const Stack = createNativeStackNavigator();
 
@@ -21,8 +21,8 @@ export default function Navigator() {
           options={{ headerShown: false }}
         />
         <Stack.Screen
-          name="Activity"
-          component={Activities}
+          name="Tab"
+          component={Tab}
           options={{ headerShown: false }}
         />
       </Stack.Navigator>

@@ -1,15 +1,15 @@
 import { View, Text, StyleSheet } from "react-native";
 import React from "react";
 
-export default function Profile() {
+export default function MainScreen() {
   return (
     <View style={styles.container}>
-      <Text>Profile page</Text>
+      <Text>Home</Text>
     </View>
   );
 }
 const styles = StyleSheet.create({
   container: {
-   marginTop:30,
+    marginTop: 30,
   },
 });

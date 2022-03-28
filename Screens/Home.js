@@ -1,5 +1,5 @@
 import { StyleSheet, Text, View, Image, TouchableOpacity } from "react-native";
-export default function Home({navigation}) {
+export default function Home({ navigation }) {
   return (
     <View style={styles.container}>
       <View style={styles.HeaderContainer}>
@@ -42,6 +42,7 @@ export default function Home({navigation}) {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    backgroundColor: "#fff",
   },
   HeaderContainer: {
     width: "100%",

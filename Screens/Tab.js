@@ -1,11 +1,11 @@
 import { View, Text } from "react-native";
 import * as React from "react";
-import { NavigationContainer } from "@react-navigation/native";
-import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
+import { createBottomTabNavigator} from "@react-navigation/bottom-tabs";
 import Ionicons from "react-native-vector-icons/Ionicons";
-import Home from "./Profile";
+import Home from "./MainScreen";
 import DetailsScreen from "./Details";
 import SettingsScreen from "./Setting";
+import ProfileScreen from "./Profile";
 
 const homeName = "Home";
 const detailsName = "Details";
@@ -44,7 +44,7 @@ export default function Activities() {
     >
       <Tab.Screen name={homeName} component={Home} />
       <Tab.Screen name={detailsName} component={DetailsScreen} />
-      <Tab.Screen name={ProfileName} component={SettingsScreen} />
+      <Tab.Screen name={ProfileName} component={ProfileScreen} />
       <Tab.Screen name={settingsName} component={SettingsScreen} />
     </Tab.Navigator>
   );

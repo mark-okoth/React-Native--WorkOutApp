@@ -13,7 +13,7 @@ export default function Login({ navigation }) {
       </Text>
       <TextInput placeholder="E-mail" style={styles.input} />
       <TextInput placeholder="Password" style={styles.input} secureTextEntry={true}/>
-      <TouchableOpacity style={styles.button} onPress={() => navigation.navigate("Activity")}>
+      <TouchableOpacity style={styles.button} onPress={() => navigation.navigate("Tab")}>
         <Text style={{ color: "white", fontWeight: "bold", fontSize: 20 }}>
           Login
         </Text>
