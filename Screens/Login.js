@@ -5,6 +5,8 @@ import {
   TextInput,
   StyleSheet,
 } from "react-native";
+
+import React from "react";
 export default function Login({ navigation }) {
   return (
     <View style={styles.LoginContainer}>
@@ -12,13 +14,20 @@ export default function Login({ navigation }) {
         Login to My MyoMus
       </Text>
       <TextInput placeholder="E-mail" style={styles.input} />
-      <TextInput placeholder="Password" style={styles.input} secureTextEntry={true}/>
-      <TouchableOpacity style={styles.button} onPress={() => navigation.navigate("Tab")}>
+      <TextInput
+        placeholder="Password"
+        style={styles.input}
+        secureTextEntry={true}
+      />
+      <TouchableOpacity
+        style={styles.button}
+        onPress={() => navigation.navigate("Tab")}
+      >
         <Text style={{ color: "white", fontWeight: "bold", fontSize: 20 }}>
           Login
         </Text>
       </TouchableOpacity>
-      <View >
+      <View>
         <Text
           style={{
             fontSize: 16,

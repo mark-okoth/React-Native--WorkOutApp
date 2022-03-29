@@ -1,4 +1,5 @@
 import { StyleSheet, Text, View, Image, TouchableOpacity } from "react-native";
+import React from 'react';
 export default function Home({ navigation }) {
   return (
     <View style={styles.container}>
