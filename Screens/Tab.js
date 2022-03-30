@@ -11,6 +11,7 @@ const detailsName = "Details";
 const settingsName = "Settings";
 const ProfileName = "Profile";
 
+
 const Tab = createBottomTabNavigator();
 
 export default function Activities() {
