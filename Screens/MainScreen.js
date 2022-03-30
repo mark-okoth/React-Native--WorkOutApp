@@ -7,7 +7,6 @@ export default function MainScreen() {
   useEffect(() => {
     const GetDaysOfTheWeek = () => {
       axios.get("https://wger.de/api/v2/daysofweek/").then((res) => {
-        console.log(res.data);
         setData(res.data.results);
       });
     };
@@ -17,10 +16,12 @@ export default function MainScreen() {
     <ScrollView style={styles.container} scro>
       <View style={styles.cover}>
         <View style={styles.header}>
-          <Text style={{ fontSize: 30 }}>Todays activity</Text>
+          <Text style={{ fontSize: 30, fontWeight: "bold" }}>
+            Todays activity
+          </Text>
         </View>
         {data.map((days) => (
-          <View style={styles.Datacontainer}>
+          <View style={styles.Datacontainer} key={days.day_of_week}>
             <Text style={styles.Textcontainer}>{days.day_of_week}</Text>
           </View>
         ))}
@@ -36,7 +37,7 @@ const styles = StyleSheet.create({
   cover: {
     display: "flex",
     justifyContent: "center",
-    alignItems : "center",
+    alignItems: "center",
   },
   Datacontainer: {
     width: "100%",
