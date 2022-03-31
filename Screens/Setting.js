@@ -7,6 +7,8 @@ import {
   TouchableHighlight,
 } from "react-native";
 import React from "react";
+import Ionicons from "react-native-vector-icons/Ionicons";
+import { data } from "../data";
 
 export default function Setting() {
   return (
@@ -50,6 +52,23 @@ export default function Setting() {
             <Text style={styles.Textcontainer1}>+254 7912 36814 </Text>
           </View>
         </View>
+        <View style={styles.ListView}>
+          {data.map((item) => (
+            <View style={styles.ListViewCover} key={item.id}>
+              <View style={styles.left}>
+                <Ionicons name={item.icon} size={25} color="orange" />
+                <Text style={{ marginLeft: 20, fontSize: 18, width: "60%" }}>
+                  {item.title}
+                </Text>
+              </View>
+              <View>
+                <TouchableHighlight style={{color:"red"}}>
+                  <Ionicons name="chevron-forward" size={20} color="gray"  />
+                </TouchableHighlight>
+              </View>
+            </View>
+          ))}
+        </View>
       </View>
     </ScrollView>
   );
@@ -66,7 +85,6 @@ const styles = StyleSheet.create({
     alignItems: "center",
     textAlign: "center",
     marginTop: 20,
-    // height: "100%",
   },
   Textcontainer: {
     fontSize: 30,
@@ -74,5 +92,23 @@ const styles = StyleSheet.create({
   },
   Textcontainer1: {
     marginTop: 5,
+  },
+  ListViewCover: {
+    width: "100%",
+    display: "flex",
+    flexDirection: "row",
+    justifyContent: "space-around",
+    alignItems: "center",
+    marginTop: 30,
+  },
+  left: {
+    display: "flex",
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "flex-start",
+    width: "60%",
+  },
+  ListView: {
+    marginTop: 30,
   },
 });
